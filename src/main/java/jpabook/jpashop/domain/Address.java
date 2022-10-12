@@ -8,10 +8,18 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Embeddable
-@Getter @Setter
+@Getter
 public class Address {
-    @Id @GeneratedValue
     private String city;
     private String street;
     private String zipcode;
+
+    protected Address() {
+    }
+
+    public Address(String city, String street, String zipcode) {
+        this.city = city;
+        this.street = street;
+        this.zipcode = zipcode;
+    }
 }
