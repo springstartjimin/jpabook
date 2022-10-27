@@ -3,8 +3,10 @@ package jpabook.jpashop.domain;
 
 import lombok.Getter;
 import lombok.Setter;
+import net.minidev.json.annotate.JsonIgnore;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotEmpty;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,6 +18,7 @@ public class Member {
     @GeneratedValue
     @Column(name = "member_id")
     private Long id;
+
     private String name;
 
     @Embedded
